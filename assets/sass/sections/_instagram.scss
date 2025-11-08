@@ -1,0 +1,93 @@
+/**
+ * Instagram
+ */
+
+.tm-instaphotos {
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+        max-width: calc(100% / 8);
+        list-style: none;
+
+        a {
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(#000000, 0.5);
+                transition: $transition;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            ul {
+                padding-left: 0;
+                margin-bottom: 0;
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                backface-visibility: hidden;
+
+                li {
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #ffffff;
+                    font-size: 14px;
+                    transition: $transition;
+                    visibility: hidden;
+                    opacity: 0;
+                    white-space: nowrap;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &:hover::before {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &:hover {
+                ul {
+                    li {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$layout-tablet} {
+        li {
+            max-width: calc(100% / 4);
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        li {
+            max-width: calc(100% / 4);
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        li {
+            max-width: calc(100% / 3);
+        }
+    }
+}

@@ -1,0 +1,121 @@
+/**
+ * Form
+ */
+
+.tm-form {
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: -30px;
+    }
+
+    &-field {
+        margin-top: 30px;
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        a {
+            color: $color-body;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+
+    &-fieldhalf {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+
+    label {
+        font-family: $ff-body;
+        font-size: 15px;
+        color: $color-heading;
+        line-height: 22px;
+    }
+
+    input,
+    textarea,
+    select {
+        border: 1px solid darken($color-border, 10);
+        background: transparent;
+        @include placeholder-color($color-body);
+        color: $color-body;
+        border-radius: 4px;
+
+        &:focus {
+            border-color: rgba($color-theme, 0.3);
+        }
+    }
+
+    textarea {
+        min-height: 200px;
+    }
+
+    .nice-select {
+        border: 1px solid darken($color-border, 10);
+        background: transparent;
+        color: $color-body;
+        border-radius: 3px;
+
+        &.open {
+            border-color: rgba($color-theme, 0.3);
+        }
+    }
+
+    &-sociallogin {
+        display: flex;
+        align-items: center;
+
+        h6 {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-left: 10px;
+
+                a {
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                    border-radius: 100px;
+                    color: #ffffff;
+                    background: $color-theme;
+                    text-align: center;
+
+                    &:hover {
+                        color: #ffffff;
+                        box-shadow: $shadow;
+                    }
+
+                    &.facebook-btn {
+                        background: $facebook;
+                    }
+
+                    &.google-btn {
+                        background: $google;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+
+        &-fieldhalf {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}

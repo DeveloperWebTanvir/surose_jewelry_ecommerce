@@ -1,0 +1,106 @@
+/*
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ *
+ * Template Name: Surose - Jewelry eCommerce HTML Template  
+ * Template URI: https://thememarch.com/demo/html/surose/
+ * Description: Surose is a fully responsive Jewelry eCommerce HTML template which comes with the unique and clean design. It built with latest bootstrap 4 framework which makes the template fully customizable. This template is mobile responsive. Design for all kind of Jewellery store.
+ * Author: Thememarch
+ * Author URI: https://thememarch.com
+ * Version: 1.0
+ *
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ */
+
+
+/*
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+    TABLE OF CONTENTS
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+
+    01. Reset 
+    02. Animations 
+    03. Typography 
+    04. Utilities 
+    
+    05. Button
+    06. Title
+    07. Feature
+    08. Form
+    09. Selectbox
+    10. Tabgroup
+    11. Pagination
+    12. Banner
+
+    13. Header
+    14. Navigation
+    15. Heroslider
+    16. About
+    17. Service
+    18. Product
+    19. Offer
+    20. Newsletter
+    21. Team Member
+    22. Portfolio
+    23. Blog
+    24. Contact
+    25. Brand Logo
+    36. Shop
+    27. Breadcrumb
+    28. Widgets
+    29. Comment
+    30. Footer
+
+    31. Product Details
+    32. Shopping Cart
+    33. Checkout
+    34. My Account
+
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+    END TABLE OF CONTENTS
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+*/
+
+
+
+@import 'variables';
+@import 'mixins';
+
+@import 'basic/reset';
+@import 'basic/animations';
+@import 'basic/typography';
+@import 'basic/utilities';
+
+@import 'elements/button';
+@import 'elements/titles';
+@import 'elements/feature';
+@import 'elements/form';
+@import 'elements/selectbox';
+@import 'elements/tab';
+@import 'elements/pagination';
+@import 'elements/banner';
+
+@import 'sections/header';
+@import 'sections/nav';
+@import 'sections/heroslider';
+@import 'sections/about';
+@import 'sections/service';
+@import 'sections/product';
+@import 'sections/offer';
+@import 'sections/instagram';
+@import 'sections/newsletter';
+@import 'sections/team';
+@import 'sections/portfolio';
+@import 'sections/blog';
+@import 'sections/contact';
+@import 'sections/brandlogo';
+@import 'sections/shop';
+@import 'sections/breadcrumb';
+@import 'sections/widgets';
+@import 'sections/comment';
+@import 'sections/footer';
+
+
+@import 'pages/product-details';
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/account';

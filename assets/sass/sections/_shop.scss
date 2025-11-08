@@ -1,0 +1,51 @@
+/**
+ * Shop
+ */
+
+.tm-shop {
+    &-header {
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -15px;
+
+        .nice-select {
+            width: auto;
+            min-width: 200px;
+            margin-top: 15px;
+
+            .list {
+                width: 100%;
+            }
+        }
+    }
+
+    &-productview {
+        margin-top: 15px;
+        margin-right: 50px;
+
+        span{
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 5px;
+            font-size: 20px;
+            height: auto;
+            border: 0;
+            vertical-align: middle;
+
+            &.active{
+                color: $color-heading;
+            }
+        }
+    }
+
+    &-countview {
+        margin-bottom: 0;
+        flex-grow: 100;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,75 @@
+/**
+ * Portfolio
+ */
+
+.tm-portfolio {
+    display: block;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(#000000, 0.6);
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: $transition;
+    }
+
+    &::after {
+        content: "\f25e";
+        font-family: "Ionicons";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        font-size: 30px;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: $transition;
+    }
+
+    &:hover::before {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover::after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &-filters {
+        margin-bottom: 50px;
+
+        button {
+            padding: 0;
+            border: 0;
+            outline: none;
+            height: auto;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-heading;
+            position: relative;
+            transition: $transition;
+            margin: 0 17px;
+
+            &.is-active {
+                color: $color-theme;
+            }
+        }
+    }
+}

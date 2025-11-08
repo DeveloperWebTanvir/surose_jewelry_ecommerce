@@ -1,0 +1,29 @@
+/**
+ * Banner
+ */
+
+.tm-banner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba($color-theme, 0.3);
+        transition: $transition;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    &:hover::before{
+        visibility: visible;
+        opacity: 1;
+        animation: bannerAnim 1s linear 0s 1 both;
+    }
+}

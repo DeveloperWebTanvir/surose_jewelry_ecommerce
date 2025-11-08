@@ -1,0 +1,195 @@
+/**
+ * Offer
+ */
+
+.tm-offer {
+    &-content {
+        h6 {
+            font-weight: 600;
+            font-family: $ff-body;
+        }
+
+        h1 {
+            font-size: 60px;
+            line-height: 72px;
+
+            span {
+                color: $color-theme;
+            }
+        }
+
+        .tm-countdown {
+            margin-top: 0;
+        }
+
+        .tm-button {
+            margin-top: 50px;
+        }
+    }
+
+    &-image {
+        height: 450px;
+        width: 450px;
+        padding: 20px;
+        border-radius: 1000px;
+        margin: auto;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 90%;
+            max-width: 90%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($color-theme, 0.15);
+            z-index: -1;
+            border-radius: 1000px;
+            animation: growShrink 5s ease-in-out 0.2s infinite both;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($color-theme, 0.1);
+            z-index: -1;
+            border-radius: 1000px;
+            animation: growShrink2 5s ease-in-out 0.2s infinite both;
+        }
+    }
+
+    @media #{$layout-notebook} {
+        &-content {
+            h1 {
+                font-size: 54px;
+                line-height: 66px;
+            }
+        }
+    }
+
+    @media #{$layout-tablet} {
+        &-image {
+            margin-bottom: 50px;
+        }
+
+        &-content {
+            h1 {
+                font-size: 46px;
+                line-height: 56px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-image {
+            margin-bottom: 50px;
+        }
+
+        &-content {
+            h1 {
+                font-size: 46px;
+                line-height: 56px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        &-image {
+            height: 360px;
+            width: 360px;
+        }
+
+        &-content {
+            h1 {
+                font-size: 36px;
+                line-height: 46px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        &-image {
+            height: 270px;
+            width: 270px;
+        }
+    }
+}
+
+
+/* Countdown */
+.tm-countdown {
+    margin-top: -30px;
+
+    &-pack {
+        min-width: 100px;
+        min-height: 100px;
+        text-align: center;
+        background: #ffffff;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        box-shadow: $shadow;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        h2 {
+            margin-top: 5px;
+            margin-bottom: 0;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        h6 {
+            font-family: $ff-body;
+            font-weight: 400;
+            margin-bottom: 0;
+            color: $color-body;
+        }
+    }
+
+    @media #{$layout-notebook} {
+        margin-top: -20px;
+
+        &-pack {
+            margin-top: 20px;
+            min-width: 95px;
+            min-height: 95px;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        margin-top: -20px;
+
+        &-pack {
+            margin-top: 20px;
+            min-width: 95px;
+            min-height: 95px;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+/**
+ * Footer
+ */
+
+.tm-footer {
+
+    &-toparea {
+        background-position: top center;
+    }
+
+    &-bottomarea {
+        border-top: 1px solid $color-border;
+        padding: 20px 0;
+    }
+
+    &-copyright {
+        margin-bottom: 0;
+        margin: 5px 0;
+
+        a {
+            font-weight: 600;
+            color: $color-body;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+
+    &-payment {
+        text-align: right;
+        margin: 5px 0;
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-copyright {
+            text-align: center;
+        }
+
+        &-payment {
+            text-align: center;
+        }
+    }
+}
+
+
+.widgets-footer {
+    margin-top: -50px;
+
+    .single-widget {
+        margin-top: 50px;
+        padding: 0;
+
+        .widget-title {
+
+            &::after {
+                height: 1px;
+                background: $color-black;
+            }
+        }
+    }
+
+    .widget-info {
+        ul {
+            li {
+                a {
+
+                    &:hover {
+                        border-color: $color-theme;
+                    }
+                }
+            }
+        }
+    }
+}

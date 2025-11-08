@@ -1,0 +1,26 @@
+/**
+ * Title
+ */
+
+.tm-sectiontitle {
+    margin-bottom: 55px;
+    padding: 0 40px;
+    
+    h3 {
+        margin-top: -5px;
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    @media #{$layout-notebook}{
+        padding: 0;
+    }
+
+    @media #{$layout-mobile-sm}{
+        padding: 0;
+    }
+}

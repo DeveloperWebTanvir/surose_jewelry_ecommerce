@@ -1,0 +1,37 @@
+/**
+ * Feature
+ */
+
+.tm-feature {
+    &-area {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    display: flex;
+
+    &-icon {
+        flex: 0 0 100px;
+        max-width: 100px;
+        text-align: center;
+        align-self: center;
+    }
+
+    &-content {
+        h6 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    @media #{$layout-mobile-sm}{
+        &-icon{
+            flex: 0 0 85px;
+            max-width: 85px;
+        }
+    }
+}

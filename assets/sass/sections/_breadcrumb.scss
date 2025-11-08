@@ -1,0 +1,55 @@
+/**
+ * Breadcrumb
+ */
+
+.tm-breadcrumb {
+    &-area {
+        background-position: bottom center;
+    }
+
+    h2 {
+        font-weight: 600;
+        margin-top: -5px;
+        color: #ffffff;
+    }
+
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        font-size: 0;
+        margin-bottom: -10px;
+
+        li {
+            font-family: $ff-heading;
+            font-size: 16px;
+            display: inline-block;
+            color: #ffffff;
+
+            &::after {
+                content: '/';
+                padding: 0 5px;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            a {
+                color: #ffffff;
+
+                &:hover {
+                    color: $color-theme;
+                }
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        ul {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,176 @@
+/**
+ * Checkout
+ */
+
+.tm-checkout {
+
+    &-coupon {
+        margin-bottom: 50px;
+
+        &>a {
+            display: block;
+            background: transparent;
+            padding: 13px 20px;
+            font-size: 15px;
+            color: $color-heading;
+            border: 5px solid transparent;
+            border-left: 5px solid $color-theme;
+            box-shadow: 0px 3px 6px 2px rgba(0, 0, 0, 0.1);
+
+            span {
+                color: $color-theme;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &-couponform {
+        padding-top: 30px;
+        display: flex;
+
+        input:not([type="submit"]) {
+            max-width: 300px;
+            flex-shrink: 100;
+            border-radius: 4px;
+        }
+    }
+
+    &-form {
+        .small-title {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    &-differentform {
+        display: none;
+
+        .tm-form-inner {
+            margin-top: 0;
+        }
+    }
+
+    &-orderinfo {
+        background: $color-grey;
+        padding: 30px;
+    }
+
+    &-ordertable {
+
+        td,
+        th {
+            padding: 0;
+        }
+
+        thead {
+            th {
+                text-transform: uppercase;
+                font-size: 16px;
+                padding-bottom: 10px;
+            }
+
+            th+th {
+                text-align: right;
+            }
+        }
+
+        tbody {
+            border-top: 2px solid $color-border;
+
+            tr {
+                border-bottom: 1px solid $color-border;
+            }
+
+            td {
+                padding: 10px 0;
+            }
+
+            td+td {
+                text-align: right;
+            }
+        }
+
+        tfoot {
+            tr {
+                &:first-child {
+                    td {
+                        padding-top: 25px;
+                    }
+                }
+
+                td+td {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    &-subtotal,
+    &-shipping {
+        td {
+            font-size: 16px;
+            padding: 5px 0;
+        }
+
+        td+td {
+            color: $color-heading;
+            font-weight: 700;
+        }
+    }
+
+    &-total {
+        td {
+            padding-top: 15px;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        td+td {
+            color: $color-theme;
+        }
+    }
+
+    &-payment {
+        margin-top: 20px;
+
+        label {
+            margin-bottom: 0;
+            display: block;
+            color: $color-heading;
+            font-weight: 700;
+        }
+
+        &-content {
+            display: none;
+            padding-left: 25px;
+            padding-top: 10px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-submit {
+        margin-top: 30px;
+    }
+
+    @media #{$layout-tablet} {
+        &-orderinfo {
+            margin-top: 50px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-orderinfo {
+            margin-top: 50px;
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        &-orderinfo {
+            padding: 20px;
+        }
+    }
+}

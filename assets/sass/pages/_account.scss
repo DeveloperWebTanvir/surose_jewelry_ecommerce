@@ -1,0 +1,120 @@
+/**
+ * My Account
+ */
+
+.tm-myaccount {
+
+    &-dashboard,
+    &-address {
+        border: 1px solid $color-border;
+        padding: 30px;
+    }
+
+    &-dashboard {
+        p {
+            a {
+                color: $color-theme;
+
+                &:hover {
+                    color: $color-theme;
+                }
+            }
+        }
+    }
+
+    &-orders {
+        table {
+            text-align: center;
+
+            th,
+            td {
+                vertical-align: middle;
+            }
+        }
+
+        &-col {
+            &-id {
+                min-width: 100px;
+            }
+
+            &-date {
+                min-width: 170px;
+            }
+
+            &-status {
+                min-width: 100px;
+            }
+
+            &-total {
+                min-width: 180px;
+            }
+
+            &-view {
+                min-width: 120px;
+            }
+        }
+    }
+
+    &-address {
+        &>p {
+            margin-bottom: 25px;
+        }
+
+        &-billing,
+        &-shipping {
+            border: 1px solid $color-border;
+            padding: 30px;
+            @include clearfix();
+
+            h3 {
+                font-weight: 700;
+            }
+
+            address {
+                margin-bottom: 0;
+            }
+
+            a.edit-button {
+                float: right;
+                padding: 0 8px;
+                background: $color-theme;
+                color: #ffffff;
+                border-radius: 3px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+
+        &-dashboard,
+        &-address {
+            padding: 20px;
+        }
+
+        &-address {
+
+            &-billing,
+            &-shipping {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.tm-login-form,
+.tm-register-form {
+    h4 {
+        margin-top: -7px;
+    }
+}
+
+.tm-register-form {
+    @media #{$layout-tablet} {
+        margin-top: 50px;
+    }
+
+    @media #{$layout-mobile-lg} {
+        margin-top: 50px;
+    }
+}

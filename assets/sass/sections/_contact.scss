@@ -1,0 +1,58 @@
+/**
+ * Contact
+ */
+
+.tm-contact {
+    &-block {
+        background: $color-grey;
+        padding: 30px;
+
+        i {
+            font-size: 40px;
+            color: $color-heading;
+            margin-bottom: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            transition: $transition;
+        }
+
+        h6 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: $color-body;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+
+        &:hover{
+            i{
+                color: $color-theme;
+            }
+        }
+    }
+}
+
+.google-map {
+    min-height: 500px;
+
+    @media #{$layout-tablet} {
+        min-height: 400px;
+    }
+
+    @media #{$layout-mobile-lg} {
+        min-height: 350px;
+    }
+
+    @media #{$layout-mobile-sm} {
+        min-height: 300px;
+    }
+}

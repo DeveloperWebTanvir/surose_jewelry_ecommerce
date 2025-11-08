@@ -1,0 +1,27 @@
+/**
+ * About
+ */
+
+.tm-about {
+    &-content {
+        h4 {
+            font-weight: 700;
+        }
+
+        h6 {
+            color: $color-body;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        &-content {
+            padding-top: 30px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-content {
+            padding-top: 30px;
+        }
+    }
+}

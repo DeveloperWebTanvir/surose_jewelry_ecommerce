@@ -1,0 +1,419 @@
+/**
+ * Typography
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+body {
+    overflow: hidden !important;
+    font-size: $fz-body;
+    line-height: $lh-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $ff-body;
+    color: $color-body;
+    font-weight: 400;
+}
+
+@include placeholder-color($color-body);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+p,
+pre,
+blockquote,
+dl,
+dd,
+menu,
+ol,
+ul,
+table,
+caption,
+hr {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $ff-heading;
+    color: $color-heading;
+}
+
+h1,
+.h1 {
+    font-size: $fz-heading-1;
+    line-height: $lh-heading-1;
+    font-weight: 700;
+}
+
+h2,
+.h2 {
+    font-size: $fz-heading-2;
+    line-height: $lh-heading-2;
+    font-weight: 700;
+}
+
+h3,
+.h3 {
+    font-size: $fz-heading-3;
+    line-height: $lh-heading-3;
+    font-weight: 600;
+}
+
+h4,
+.h4 {
+    font-size: $fz-heading-4;
+    line-height: $lh-heading-4;
+    font-weight: 600;
+}
+
+h5,
+.h5 {
+    font-size: $fz-heading-5;
+    line-height: $lh-heading-5;
+    font-weight: 500;
+}
+
+h6,
+.h6 {
+    font-size: $fz-heading-6;
+    line-height: $lh-heading-6;
+    font-weight: 500;
+}
+
+@media #{$layout-tablet} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 4;
+        line-height: $lh-heading-1 - 4;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 2;
+        line-height: $lh-heading-2 - 2;
+    }
+
+    h3,
+    .h3 {
+        font-size: $fz-heading-3 - 2;
+        line-height: $lh-heading-3 - 2;
+    }
+}
+
+@media #{$layout-mobile-lg} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 6;
+        line-height: $lh-heading-1 - 6;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 4;
+        line-height: $lh-heading-2 - 4;
+    }
+
+    h3,
+    .h3 {
+        font-size: $fz-heading-3 - 2;
+        line-height: $lh-heading-3 - 2;
+    }
+
+    h4,
+    .h4 {
+        font-size: $fz-heading-4 - 2;
+        line-height: $lh-heading-4 - 2;
+    }
+
+    h5,
+    .h5 {
+        font-size: $fz-heading-5 - 2;
+        line-height: $lh-heading-5 - 2;
+    }
+
+    h6,
+    .h6 {
+        font-size: $fz-heading-6 - 2;
+        line-height: $lh-heading-6 - 2;
+    }
+}
+
+::-moz-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-ms-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-o-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+a {
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button,
+select,
+textarea {
+    background: transparent;
+    border: 1px solid $color-border;
+    transition: all 0.4s ease-out 0s;
+    color: $color-body;
+    @include placeholder-color($color-body);
+    font-family: $ff-body;
+
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: $color-theme;
+    }
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    color: $fz-body;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+input,
+select,
+button {
+    height: $input-button-height;
+    padding: 0 15px;
+
+    @media #{$layout-mobile-lg} {
+        height: 44px;
+    }
+}
+
+textarea {
+    padding: 10px 15px;
+}
+
+blockquote {
+    border-left: 5px solid $color-theme;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    p {
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+
+    footer {
+        font-size: 14px;
+
+        a {
+            color: $color-theme;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 20px;
+    }
+}
+
+[class^="flaticon-"],
+[class*=" flaticon-"],
+[class^="flaticon-"],
+[class*=" flaticon-"] {
+    line-height: 1;
+
+    &::before,
+    &::after {
+        margin-left: 0;
+        font-size: inherit;
+        vertical-align: middle;
+    }
+}
+
+.stylish-list {
+    padding-left: 0;
+    display: block;
+
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 16px;
+            line-height: 30px;
+            color: $color-body;
+        }
+    }
+}
+
+.stylish-list-color {
+    @extend .stylish-list;
+
+    li {
+        i {
+            color: $color-theme;
+        }
+    }
+}
+
+
+
+/* Checkbox & Radio Styles */
+input[type=checkbox],
+input[type=radio] {
+    visibility: hidden;
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    display: none;
+
+    &~label {
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+
+        a {
+            font-weight: 600;
+        }
+
+        &:before {
+            content: "";
+            font-family: 'Ionicons';
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            border: 1px solid #dddddd;
+            height: 15px;
+            width: 15px;
+            line-height: 1.5;
+            font-size: 9px;
+            text-align: center;
+        }
+    }
+
+    &:checked {
+        &~label {
+            color: $color-theme;
+
+            a {
+                color: $color-theme;
+            }
+
+            &:before {
+                content: "\f121";
+                color: $color-theme;
+                border-color: $color-theme;
+            }
+        }
+    }
+}
+
+input[type=radio] {
+    &~label {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border: 2px solid #dddddd;
+            border-radius: 100px;
+            height: 15px;
+            width: 15px;
+            margin-top: -8px;
+            line-height: .5;
+            font-size: 28px
+        }
+    }
+
+    &:checked {
+        &~label {
+            &::before {
+                content: "";
+                color: $color-theme;
+                border-color: $color-theme
+            }
+        }
+    }
+}
